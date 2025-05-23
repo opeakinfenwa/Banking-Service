@@ -104,6 +104,8 @@ KAFKA_BROKER=localhost:9092
 
 ### Installation & Running
 
+Clone the repository and install dependencies in each service folder:
+
 ```bash
 # User Service
 cd "user service"
