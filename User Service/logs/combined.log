@@ -1,0 +1,36 @@
+{"context":{"context":"DatabaseModule"},"level":"info","message":"Successfully connected to MongoDB"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"CommonModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"WinstonModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DatabaseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"UserController {/users}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/users/signup, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/users/:id, PUT} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/users/:id, DELETE} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/users/:userId, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/auth}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/login, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/logout, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/google, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/google/callback, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/dashboard, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/failure, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/reset-password, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/auth/change-password, POST} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":{"module":"Main"},"level":"info","message":"User Service listening on port 5001"}
+{"context":{"context":"DatabaseModule"},"level":"info","message":"DatabaseModule destroyed"}

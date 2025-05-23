@@ -1,0 +1,36 @@
+{"context":{"context":"DatabaseModule"},"level":"info","message":"Successfully connected to MongoDB"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application..."}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"LoggerModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"KafkaModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"WinstonModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseCoreModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"MongooseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"DatabaseModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"AccountsModule dependencies initialized"}
+{"context":"InstanceLoader","level":"info","message":"TransactionsModule dependencies initialized"}
+{"context":"RoutesResolver","level":"info","message":"AccountController {/accounts}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/:accountNumber, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/freeze/:accountNumber, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/unfreeze/:accountNumber, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/close/:accountNumber, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/:accountNumber, DELETE} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/fund, PATCH} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/accounts/:accountNumber/balance, GET} route"}
+{"context":"RoutesResolver","level":"info","message":"TransactionController {/transactions}:"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/transactions, POST} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/transactions/:accountNumber, GET} route"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/transactions/:transactionId/details, GET} route"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started"}
+{"context":{"module":"Main"},"level":"info","message":"Banking Service listening on port 5002"}
+{"context":{"context":"DatabaseModule"},"level":"info","message":"DatabaseModule destroyed"}
