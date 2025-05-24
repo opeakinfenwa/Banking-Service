@@ -5,8 +5,8 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
-import { AuthUtilsService } from '../common/utils/auth.utils';
-import { User, UserDocument } from '../schemas/user.schema';
+import { AuthUtilsService } from '../../common/utils/auth.utils';
+import { User, UserDocument } from '../../schemas/user.schema';
 import { ResetPasswordDto } from './dtos/resetPassword.dto';
 import { ChangePasswordDto } from './dtos/changePassword.dto';
 

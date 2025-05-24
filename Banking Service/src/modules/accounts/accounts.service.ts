@@ -7,7 +7,10 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import * as mongoose from 'mongoose';
-import { Account, AccountDocument } from '../schemas/accounts/accounts.schema';
+import {
+  Account,
+  AccountDocument,
+} from '../../schemas/accounts/accounts.schema';
 import { generateRandomAccountNumber } from 'src/common/utils/generateAccountNumber.utils';
 import { CreateAccountDto } from './dtos/createAccount.dto';
 import { KafkaProducerService } from 'src/kafka/producer';

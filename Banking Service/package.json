@@ -1,7 +1,7 @@
 {
   "name": "banking-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Handles core banking operations including transactions, balance updates, and account management in a microservices architecture",
   "author": "Bami Akinfenwa",
   "private": true,
   "license": "MIT",

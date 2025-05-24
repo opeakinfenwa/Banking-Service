@@ -5,7 +5,7 @@ import {
   VerifyCallback,
   Profile,
 } from 'passport-google-oauth20';
-import { AuthService } from 'src/auth/auth.service';
+import { AuthService } from 'src/modules/auth/auth.service';
 import { Request } from 'express';
 import { ConfigService } from '@nestjs/config';
 

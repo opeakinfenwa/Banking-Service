@@ -8,7 +8,7 @@ import {
   Response,
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { LocalAuthGuard } from '../common/guards/localAuth.guards';
+import { LocalAuthGuard } from '../../common/guards/localAuth.guards';
 import { JwtAuthGuard } from 'src/common/guards/auth.guards';
 import { AuthService } from './auth.service';
 import { ConfigService } from '@nestjs/config';

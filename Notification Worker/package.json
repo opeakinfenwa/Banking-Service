@@ -1,7 +1,7 @@
 {
   "name": "notification_worker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Listens for Kafka events and sends real-time alerts or notifications based on banking and user activities.",
   "author": "Bami Akinfenwa",
   "private": true,
   "license": "MIT",

@@ -6,12 +6,12 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { AuthUtilsService } from '../common/utils/auth.utils';
+import { AuthUtilsService } from '../../common/utils/auth.utils';
 import { Model } from 'mongoose';
-import { User, UserDocument } from '../schemas/user.schema';
+import { User, UserDocument } from '../../schemas/user.schema';
 import { CreateUserDto } from './dtos/createUser.dto';
 import { UpdateUserDto } from './dtos/updateUser.dto';
-import { SECURITY_QUESTIONS } from '../common/utils/securityQuestions';
+import { SECURITY_QUESTIONS } from '../../common/utils/securityQuestions';
 
 @Injectable()
 export class UserService {

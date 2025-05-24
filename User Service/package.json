@@ -1,7 +1,7 @@
 {
   "name": "user-service",
   "version": "1.0.0",
-  "description": "",
+  "description": "Manages user registration, authentication, profile data, and social login integrations within the microservices ecosystem.",
   "author": "Bami Akinfenwa",
   "private": true,
   "license": "MIT",
