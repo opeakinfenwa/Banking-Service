@@ -1,23 +1,22 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { WinstonModule } from 'nest-winston';
+import { WinstonModule, WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { createWinstonLoggerConfig } from './logger/logger.config';
 import { AllExceptionsFilter } from './common/filters/all-exceptions.filters';
-import { ValidationPipe } from '@nestjs/common';
+import { LoggerService, ValidationPipe } from '@nestjs/common';
 import * as cookieParser from 'cookie-parser';
 import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
+    logger: WinstonModule.createLogger(
+      createWinstonLoggerConfig(new ConfigService()),
+    ),
     bufferLogs: true,
   });
 
+  const logger = app.get<LoggerService>(WINSTON_MODULE_NEST_PROVIDER);
   const configService = app.get(ConfigService);
-
-  const logger = WinstonModule.createLogger(
-    createWinstonLoggerConfig(configService),
-  );
-  app.useLogger(logger);
 
   app.useGlobalPipes(
     new ValidationPipe({
