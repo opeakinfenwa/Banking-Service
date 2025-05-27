@@ -21,7 +21,7 @@ The system is split into independently running services to promote **loose coupl
 
 ## Tech Stack
 
-* **Backend Framework:** Node.js (with Express + NestJS structure)
+* **Backend Framework:** Node.js (with NestJS structure)
 * **API Gateway:** NestJS + HTTP Proxy + Global Interceptors & Exception Filters
 * **Database:** MongoDB with Replica Set enabled (for transaction support)
 * **Authentication:** JWT via HttpOnly cookies
