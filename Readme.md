@@ -14,7 +14,7 @@ The system is split into independently running services to promote **loose coupl
 
 * **Banking Service** – A composite service with:
 
-  * **Account Module** – Responsible for creating accounts, checking balances, freezing/unfreezing, changing account type, and admin-level operations.
+  * **Account Module** – Responsible for creating accounts, checking balances, freezing/unfreezing, changing account type, and admin level operations.
   * **Transaction Module** – Manages user initiated transfers with proper balance checks and transaction consistency using MongoDB sessions.
 
 * **Notification Worker** – A Kafka consumer that listens to transaction related events and handles system notifications or alerts.
