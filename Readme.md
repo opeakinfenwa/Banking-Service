@@ -1,8 +1,8 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-# Banking Event-Driven System Centralized With API Gateway
+# Banking Event Driven System Centralized With API Gateway
 
-This project is a **modular and event-driven backend system** for managing user accounts, transactions, and notifications in a banking domain. It’s structured using **microservices principles** with a clear separation of responsibilities, **Kafka for async messaging**, and **MongoDB replica sets** for reliable transaction handling. A centralized **API Gateway** which orchestrates and secures all external client interactions.
+This project is a **modular and event driven backend system** for managing user accounts, transactions, and notifications in a banking domain. It’s structured using **microservices principles** with a clear separation of responsibilities, **Kafka for async messaging**, and **MongoDB replica sets** for reliable transaction handling. A centralized **API Gateway** which orchestrates and secures all external client interactions.
 
 ## Architecture Overview
 
@@ -15,9 +15,9 @@ The system is split into independently running services to promote **loose coupl
 * **Banking Service** – A composite service with:
 
   * **Account Module** – Responsible for creating accounts, checking balances, freezing/unfreezing, changing account type, and admin-level operations.
-  * **Transaction Module** – Manages user-initiated transfers with proper balance checks and transaction consistency using MongoDB sessions.
+  * **Transaction Module** – Manages user initiated transfers with proper balance checks and transaction consistency using MongoDB sessions.
 
-* **Notification Worker** – A Kafka consumer that listens to transaction-related events and handles system notifications or alerts.
+* **Notification Worker** – A Kafka consumer that listens to transaction related events and handles system notifications or alerts.
 
 ## Tech Stack
 
@@ -32,7 +32,7 @@ The system is split into independently running services to promote **loose coupl
 
 ## Event-Driven Communication with Kafka
 
-Each domain emits or consumes Kafka events for asynchronous workflows. This keeps services loosely coupled while ensuring real-time updates.
+Each domain emits or consumes Kafka events for asynchronous workflows. This keeps services loosely coupled while ensuring real time updates.
 
 **Event Topics Include:**
 
@@ -50,7 +50,7 @@ These events are consumed by the **Notification Worker**, which handles downstre
 * Applies global **logging** and **transform interceptors**
 * Integrates a custom **global exception filter** to standardize error responses, including propagated `AxiosError` from service failures (e.g., "Email already exists" from the User Service)
 * Forwards user authentication headers (JWT) to downstream services
-* Enforces RBAC by applying global and route-level **Guards**
+* Enforces RBAC by applying global and route level **Guards**
 
 ### User Service
 
@@ -65,9 +65,8 @@ Contains two fully independent but related domains:
 #### Account Module
 
 * Create and fetch bank accounts
-* Admin-level access to:
-
-  * Freeze or unfreeze accounts
+* Admin level access to:
+* Freeze or unfreeze accounts
 * Exposes balance and account info
 * Supports RBAC (Admin vs User access)
 
@@ -90,10 +89,10 @@ Contains two fully independent but related domains:
 * **API Gateway with centralized access** for security, logging, error handling, and response formatting
 * **Domain Isolation**: Banking and User responsibilities are kept modular and independent
 * **DRY** code practices across services
-* **SOLID**-aligned services and controllers
+* **SOLID** aligned services and controllers
 * **MongoDB Replica Set** for true ACID transaction support
 * **Kafka Messaging** ensures scalable and loosely coupled architecture
-* **Secure Auth** with role-based permissions and JWT in HttpOnly cookies
+* **Secure Auth** with role based permissions and JWT in HttpOnly cookies
 * **Interceptor Layering** for consistent logging and response shaping (via `LoggingInterceptor` and `TransformInterceptor`)
 * **Global Exception Handling** with uniform structure even for downstream errors using Axios
 
@@ -113,7 +112,7 @@ Ensure each service is configured with:
 PORT=...
 JWT_SECRET=...
 MONGO_URI=...
-KAFKA_BROKER=localhost:9092
+KAFKA_BROKER=...
 ```
 
 ### Installation & Running
@@ -171,7 +170,7 @@ Admin ➝ PATCH /accounts/:id/freeze (via API Gateway)
 
 ## Acknowledgements
 
-Built to demonstrate clear understanding of domain-based service isolation, message-driven workflows using Kafka, secure transaction flows, and centralized routing/security via an API Gateway.
+Built to demonstrate clear understanding of domain based service isolation, message driven workflows using Kafka, secure transaction flows, and centralized routing/security via an API Gateway.
 
 ## License
 
