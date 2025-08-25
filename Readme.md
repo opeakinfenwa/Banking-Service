@@ -1,14 +1,14 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-# Banking Event Driven System Centralized With API Gateway
+# Banking Event Driven System Centralised With API Gateway
 
-This project is a **modular and event driven backend system** for managing user accounts, transactions, and notifications in a banking domain. It’s structured using **microservices principles** with a clear separation of responsibilities, **Kafka for async messaging**, and **MongoDB replica sets** for reliable transaction handling. A centralized **API Gateway** which orchestrates and secures all external client interactions.
+This project is a **modular and event-driven backend system** for managing user accounts, transactions, and notifications in a banking domain. It’s structured using **microservices principles** with a clear separation of responsibilities, **Kafka for async messaging**, and **MongoDB replica sets** for reliable transaction handling. A centralised **API Gateway** which orchestrates and secures all external client interactions.
 
 ## Architecture Overview
 
 The system is split into independently running services to promote **loose coupling**, **scalability**, and **separation of concerns**:
 
-* **API Gateway** – Serves as the single entry point for all external requests. It handles route proxying, request validation, auth forwarding, global error formatting, and response transformation. It also applies centralized logging and monitoring via NestJS interceptors.
+* **API Gateway** – Serves as the single entry point for all external requests. It handles route proxying, request validation, auth forwarding, global error formatting, and response transformation. It also applies centralised logging and monitoring via NestJS interceptors.
 
 * **User Service** – Handles user registration, authentication (JWT via cookies), and user metadata exposure.
 
@@ -27,7 +27,7 @@ The system is split into independently running services to promote **loose coupl
 * **Authentication:** JWT via HttpOnly cookies
 * **Message Broker:** Apache Kafka (`kafkajs`)
 * **Architecture:** Microservices
-* **Logging:** Winston (centralized logs via API Gateway)
+* **Logging:** Winston (centralised logs via API Gateway)
 * **Communication:** Internal HTTP calls + Kafka events
 
 ## Event-Driven Communication with Kafka
@@ -48,7 +48,7 @@ These events are consumed by the **Notification Worker**, which handles downstre
 
 * Unifies route access to all downstream services
 * Applies global **logging** and **transform interceptors**
-* Integrates a custom **global exception filter** to standardize error responses, including propagated `AxiosError` from service failures (e.g., "Email already exists" from the User Service)
+* Integrates a custom **global exception filter** to standardise error responses, including propagated `AxiosError` from service failures (e.g., "Email already exists" from the User Service)
 * Forwards user authentication headers (JWT) to downstream services
 * Enforces RBAC by applying global and route level **Guards**
 
@@ -74,7 +74,7 @@ Contains two fully independent but related domains:
 
 * Transfers funds between accounts with balance checks
 * Uses MongoDB **replica set transactions**
-* Ensures sender is the authorized user
+* Ensures sender is the authorised user
 * Publishes Kafka events based on the result (`TransactionCompleted`, `TransactionFailed`)
 * Enriches transaction logs with sender/receiver and user data
 
@@ -86,13 +86,13 @@ Contains two fully independent but related domains:
 
 ## Key Features & Engineering Principles
 
-* **API Gateway with centralized access** for security, logging, error handling, and response formatting
+* **API Gateway with centralised access** for security, logging, error handling, and response formatting
 * **Domain Isolation**: Banking and User responsibilities are kept modular and independent
 * **DRY** code practices across services
 * **SOLID** aligned services and controllers
 * **MongoDB Replica Set** for true ACID transaction support
 * **Kafka Messaging** ensures scalable and loosely coupled architecture
-* **Secure Auth** with role based permissions and JWT in HttpOnly cookies
+* **Secure Auth** with role-based permissions and JWT in HttpOnly cookies
 * **Interceptor Layering** for consistent logging and response shaping (via `LoggingInterceptor` and `TransformInterceptor`)
 * **Global Exception Handling** with uniform structure even for downstream errors using Axios
 
@@ -158,7 +158,7 @@ User ➝ POST /transactions/transfer (via API Gateway)
 Admin ➝ PATCH /accounts/:id/freeze (via API Gateway)
   ➝ Verifies admin role via API Gateway Guard
     ➝ Request proxied with auth headers to Account Service
-      ➝ Account status updated and returned via standardized API response
+      ➝ Account status updated and returned via standardised API response
 ```
 
 ## Future Improvements
@@ -170,7 +170,7 @@ Admin ➝ PATCH /accounts/:id/freeze (via API Gateway)
 
 ## Acknowledgements
 
-Built to demonstrate clear understanding of domain based service isolation, message driven workflows using Kafka, secure transaction flows, and centralized routing/security via an API Gateway.
+Built to demonstrate clear understanding of domain based service isolation, message driven workflows using Kafka, secure transaction flows, and centralised routing/security via an API Gateway.
 
 ## License
 
